@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Index from "./components/index.js";
+import Index from "./components/Index.js";
 import Welcome from "./components/Welcome.js";
 import DigitalClock from "./components/DigitalClock.js";
 import Comment from "./components/Comment.js";
