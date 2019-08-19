@@ -5,6 +5,7 @@ import Welcome from "./components/Welcome.js";
 import DigitalClock from "./components/DigitalClock.js";
 import Comment from "./components/Comment.js";
 import Theme from "./components/Theme.js";
+import Blog from "./components/blog/index.js";
 
 export class MainRouter extends React.Component {
   render() {
@@ -16,6 +17,7 @@ export class MainRouter extends React.Component {
           <Route exact path={'/digitalClock'} component={DigitalClock} />
           <Route exact path={'/comment'} component={Comment} />
           <Route exact path={'/theme'} component={Theme} />
+          <Route exact path={'/blog'} component={Blog} />
         </Switch>
       </HashRouter>
     );
