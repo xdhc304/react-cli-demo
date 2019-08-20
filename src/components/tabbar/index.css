@@ -3,12 +3,17 @@
 }
 
 .tabbar {
+  background: #fff;
   height: 50px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   border: 1px solid rgba(204, 204, 204, 0.43);
   padding: 5px 0;
+}
+
+.tabber-children {
+  margin-bottom: 50px;
 }
 
 .tabbar-content {

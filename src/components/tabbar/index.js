@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../static/iconfont.css'
 import './index.css'
 
 const tabbarArr = [
   {
     img: 'icon-home',
-    text: '首页'
+    text: '首页',
+    link: '/home'
   },
   {
     img: 'icon-fenlei',
-    text: '分类'
+    text: '分类',
+    link: '/category'
   },
   {
     img: 'icon-gouwuche',
-    text: '购物车'
+    text: '购物车',
+    link: '/car'
   },
   {
     img: 'icon-yonghu',
-    text: '我的'
+    text: '我的',
+    link: '/user'
   }
 ]
 
-class Tabbar extends Component {
+const Tabbar = (WrappedComponent) => class Tabbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,17 +42,23 @@ class Tabbar extends Component {
   }
 
   render() {
+    const url = window.location.href;
     return (
-      <div className="tabbar">
-        <div className="tabbar-content">
-          {
-            tabbarArr.map((v, i) => (
-              <div key={i} className={"tabbar-item" + (this.state.index === i ? ' active': '')} onClick={() => this.itemChange(i)}>
-                <div className={'iconfont ' + v.img}></div>
-                <div>{v.text}</div>
-              </div>
-            ))
-          }
+      <div className="tabbar-container">
+        <div className="tabber-children">
+          <WrappedComponent></WrappedComponent>
+        </div>
+        <div className="tabbar App">
+          <div className="tabbar-content">
+            {
+              tabbarArr.map((v, i) => (
+                <Link to={v.link} key={i} className={"tabbar-item" + (url.indexOf(v.link) > -1 ? ' active': '')} onClick={() => this.itemChange(i)}>
+                  <div className={'iconfont ' + v.img}></div>
+                  <div>{v.text}</div>
+                </Link>
+              ))
+            }
+          </div>
         </div>
       </div>
     );

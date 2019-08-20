@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Index from "./components/Index.js";
 import Welcome from "./components/Welcome.js";
 import DigitalClock from "./components/DigitalClock.js";
