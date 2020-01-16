@@ -45,6 +45,10 @@ class PageMenu extends React.Component {
     });
   }
 
+  componentDidMount() {
+    console.log(this.props.location.pathname)
+  }
+
   render() {
     return (
       <div>
