@@ -83,6 +83,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "axios": "^0.19.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "babel-preset-stage-2": "^6.24.1"
@@ -136,6 +137,14 @@
     ]
   },
   "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ],
     "presets": [
       "react-app"
     ]
