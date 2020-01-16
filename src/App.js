@@ -29,7 +29,7 @@ class App extends Component {
         </Header>
         <Content className="content">
           <Row type="flex" justify="center">
-            <Col className="gutter-row" span={12}>
+            <Col className="gutter-row" span={18}>
               <MainRouter/>
             </Col>
           </Row>

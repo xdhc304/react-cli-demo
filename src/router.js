@@ -11,6 +11,7 @@ import Home from "./components/tabbar/home";
 import Category from "./components/tabbar/category";
 import Car from "./components/tabbar/car";
 import User from "./components/tabbar/user";
+import PageMenu from "./components/PageMenu";
 
 export class MainRouter extends React.Component {
   render() {
@@ -28,6 +29,7 @@ export class MainRouter extends React.Component {
           <Route exact path={'/category'} component={Category} />
           <Route exact path={'/car'} component={Car} />
           <Route exact path={'/user'} component={User} />
+          <Route exact path={'/menu'} component={PageMenu} />
         </Switch>
       </HashRouter>
     );
