@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Index from "./components/Index.js";
 import Welcome from "./components/Welcome.js";
 import DigitalClock from "./components/DigitalClock.js";
@@ -19,7 +19,7 @@ export class MainRouter extends React.Component {
     return (
       <HashRouter>
         <Switch>
-          <Redirect from='/' to='/welcome'/>
+          {/* <Redirect from='/' to='/welcome'/> */}
           <Route exact path={'/'} component={Index} />
           <Route exact path={'/welcome'} component={Welcome} />
           <Route exact path={'/digitalClock'} component={DigitalClock} />
